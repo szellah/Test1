@@ -27,7 +27,14 @@ public class SimpleWzimBoundedQueue<E> implements WzimBoundedQueue<E> {
 
     @Override
     public boolean offer(E e) {
-        return false;
+        if(curr<arr.length)
+        {
+            arr[curr++] = e;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     @Override
