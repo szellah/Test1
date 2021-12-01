@@ -54,21 +54,31 @@ public class SimpleWzimBoundedQueue<E> implements WzimBoundedQueue<E> {
 
     @Override
     public E element() {
-        return null;
+        if(arr[0] != null){
+            E head = arr[0];
+            return head;
+        }
+        else{
+            throw new NoSuchElementException();
+        }
     }
 
     @Override
     public E peek() {
+        if(arr[0] != null){
+            E head = arr[0];
+            return head;
+        }
         return null;
     }
 
     @Override
     public int size() {
-        return 0;
+        return curr+1;
     }
 
     @Override
     public int capacity() {
-        return 0;
+        return arr.length;
     }
 }
