@@ -40,6 +40,7 @@ public class SimpleWzimBoundedQueue<E> implements WzimBoundedQueue<E> {
     @Override
     public E remove() {
         if(arr[0] != null){
+            curr--;
             return poll();
         }
         else{
