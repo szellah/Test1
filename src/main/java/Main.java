@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hej");
+        SimpleWzimBoundedQueue<String> q = new SimpleWzimBoundedQueue<String>(4);
+        q.add("Hhej");
     }
 }
